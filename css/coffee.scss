@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+
+    $black:#333;
+    $main-color:#be9c79;
+    $white:#fff;
+    $light-color:#666;
+    $border:.2rem solid $black;
+    $box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+
+:root{
+    padding: 0;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;  padding: 0;
+    box-sizing: border-box;
+    outline: none;  border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background-color: $main-color;
+    color: $white;
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $main-color;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+
+    img{
+        height: 4rem;
+        margin-bottom: 1rem;
+    }
+    h3{
+        font-size:3rem;
+        color: $black;
+        font-family: 'Merienda One', cursive;
+    }
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: $main-color;
+    cursor: pointer;
+    color: $white;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+
+    &:hover{
+        background-color: $black;
+    }
+}
+
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    z-index: 1000;
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        position: relative;
+        padding: 1.5rem 2rem;
+    
+        .logo img{
+            height: 4.5rem;
+        }
+        .navbar{
+            a{
+                margin: 0 1rem;
+                font-size: 2rem;
+                margin-left: 2rem;
+                color: $black;
+                &:hover{
+                    text-decoration: underline;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+    
+}
+
+#menu-btn{
+    display: none;
+    font-size: 2.5rem;
+    color: $black;
+    cursor: pointer;
+}
+
+.home-bg{
+    background: linear-gradient(90deg, $white, transparent 70%), url(../img/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .home{
+        min-height: 70rem;
+        display: flex;
+        align-items: center;
+        
+        .content{
+            width: 50rem;
+            text-align: center;
+            h3{
+                font-size: 6rem;
+                color: $black;
+                font-family: 'Merienda One', cursive;
+            }
+            p{
+                padding:1rem 0;
+                font-size:1.6rem;
+                color: $black;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    .image{
+        flex:1 1 40rem;
+
+        img{
+            width: 100%;
+        }
+    }
+    .content{
+        flex:1 1 40rem;
+
+        h3{
+            font-size: 4.5rem;
+            color: $black;
+            font-family: 'Merienda One', cursive;
+            padding-top: 1.5rem;
+        }
+        p{
+            padding: 1rem 0;
+            line-height: 2;
+            color: $light-color;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.facility .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+
+    .box{
+        text-align: center;
+        img{
+            height: 10rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    h3{
+        font-size: 2rem;
+        color: $black;
+        margin: 1rem;
+    }
+
+    p{
+        line-height: 2;
+        font-size: 1.5rem;
+        color:$light-color;
+    }
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    .box{
+        text-align: center;
+
+        img{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        h3{
+            font-size: 2rem;
+            color:$black;
+        }
+    }
+}
+
+.gallery .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.team .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap: 1.5rem;
+    justify-content: center;
+
+    .box{
+        text-align: center;
+        
+        img{
+            width:100%;
+            object-fit: cover;
+            margin-bottom: .5rem;
+        }
+        p{
+            font-size: 2rem;
+            color:$black;
+        }
+        h3{
+            font-size: 2rem;
+            color:$black;
+        }
+    }
+
+}
+
+.footer .box-container {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+
+    .box{
+        text-align: center;
+
+        i{
+            font-size: 2.5rem;
+            line-height: 6rem;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            background-color: $main-color;
+            color: $white;
+            margin-bottom: 1rem;
+    
+            h3{
+                margin: .5rem 0;
+                font-size: 2rem;
+                color: $black;
+            }
+            p{
+                line-height: 2;
+                font-size: 1.6rem;
+                color: $light-color;
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and(max-width:990px){
+    
+    html{
+        font-size: 55%;
+    }
+}
+
+@media only screen and(max-width:768px){
+    
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+        &.fa-times{
+            transform: rotate(180deg);
+        }
+    }
+
+
+
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: $white;
+        border-top: $border;
+        border-bottom: $border;
+        clip-path: polygon(0 0, 100% 0,100% 0, 0 0);
+        transition: .2s linear;
+       
+        a{
+            display:block;
+            margin: 2rem ;
+        }
+        &.active{
+            clip-path: polygon(0 0, 100% 0,100% 100%, 0% 100%);
+        }
+    }
+
+    .home-bg{
+        background-position: left;
+
+        .home{
+            justify-content: center;
+
+            .content h3{
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .about .content h3{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and(max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .heading img{
+        height: 3rem;
+    }
+
+    .heading h3{
+        font-size: 3rem;
+    }
+}
+
