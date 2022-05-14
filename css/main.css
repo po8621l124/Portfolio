@@ -13,7 +13,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(../image/logo.jpg);
+  background: url(../image/logo2.png);
   background-size: cover;
   background-position-x: 20%;
   background-position-y: 20%;
@@ -273,7 +273,7 @@ section.hero .down-arrow path {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .more-work .work-container3 .box {
@@ -318,47 +318,108 @@ section.hero .down-arrow path {
   opacity: 1;
 }
 
-.footer .box-container {
+.facility h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.facility .box-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1.5rem;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+  margin-top: 7rem;
 }
 
-.footer .box-container .box {
+.facility .box-container .box {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.footer .box-container .box i {
-  font-size: 1.5rem;
-  line-height: 5rem;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  background-color: #2770b4;
-  color: white;
+.facility .box-container .box img {
+  height: 4rem;
+  margin-bottom: 1rem;
 }
 
-.footer .box-container .box i h3 {
-  margin: .5rem 0;
-  font-size: 2rem;
+.facility .box-container h3 {
+  font-size: 1.4rem;
   color: black;
+  margin: 1rem;
 }
 
-.footer .box-container .box i p {
+.facility .box-container p {
   line-height: 2;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: #666;
+}
+
+.footer {
+  font-family: 'Nunito', sans-serif;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+
+.footer .flex {
+  font-size: 1rem;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.footer .flex .credit {
+  display: block ruby;
+  margin-bottom: 1.5rem;
+}
+
+.footer .flex .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .flex .info a {
+  color: black;
+  display: block;
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+.footer .flex .info a i {
+  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 680px) {
   body {
     margin: 1.5em 5em;
     font-family: 'Noto Sans Traditional Chinese', sans-serif;
+  }
+  .facility h2 {
+    font-size: 2rem;
+  }
+  .facility .box-container .box img {
+    height: 3rem;
+  }
+  .footer {
+    margin-left: 0rem;
+  }
+  .footer .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -446,6 +507,23 @@ section.hero .down-arrow path {
     -ms-grid-column-align: left;
         justify-self: left;
   }
+  .facility h2 {
+    font-size: 2rem;
+  }
+  .facility .box-container .box img {
+    height: 4rem;
+  }
+  .footer {
+    margin-left: 0rem;
+  }
+  .footer .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .flex .credit {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -454,6 +532,17 @@ section.hero .down-arrow path {
   }
   .feature {
     gap: 0;
+  }
+  .footer {
+    margin-left: 0rem;
+  }
+  .footer .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .flex .credit {
+    margin-bottom: 0;
   }
 }
 

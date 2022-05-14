@@ -1,3 +1,10 @@
+
+$light-color: #666;
+$main-color: #0789de;
+$black: #000;
+$white: #fff;
+$cover-color: rgb(39, 112, 180);
+
 body{
     margin: 1.5em;
     font-family: 'Noto Sans Traditional Chinese', sans-serif;
@@ -12,7 +19,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    background: url(../image/logo.jpg);
+    background: url(../image/logo2.png);
     background-size: cover;
     background-position-x: 20%;
     background-position-y: 20%;
@@ -24,7 +31,7 @@ a{
 }
 
 .logo{
-    color:  white;
+    color:  $white;
     font-weight: bold;
 }
 
@@ -32,7 +39,7 @@ nav {
     position: fixed;
     right: 0;
     top: 0;
-    background-color: white;
+    background-color: $white;
     height: 100vh;
     width: 50%;
     z-index: 999;
@@ -45,7 +52,7 @@ nav {
         padding: 0;
         margin-top: 8em;
         a{
-            color: black;
+            color: $black;
             padding: .75em 2em;
             display: block;
             width: 100%;
@@ -84,20 +91,20 @@ h1{
 }
 
 section.hero{
-    color: white;
+    color: $white;
     height: 90vh;
     animation: moveDown 1s ease-in-out forwards;
     opacity: 0;
 
     .down-arrow{
-        stroke: white;
+        stroke: $white;
         position: absolute;
         bottom: 2em;
         width: 1em;
         animation: moveArrow 1s alternate-reverse infinite;
 
         path{
-            fill: white;
+            fill: $white;
         }
     }
 }
@@ -158,14 +165,14 @@ section.hero{
         
               .text{
                 text-align: center;
-                background: rgb(39, 112, 180);
+                background: $cover-color;
                 padding: 8rem 0;
                 transform: rotateX(-90deg);  
                         //主要是動這邊, 相當於rotate3d(1, 0, 0, -90).
                 transform-origin: 50% 50%;
                 transition: 0.5s;
                 opacity: 0;
-                color: white;
+                color: $white;
                 font-size: 1.5rem;
         
                 p{
@@ -212,14 +219,14 @@ section.hero{
 
             .text{
                 text-align: center;
-                background: rgb(39, 112, 180);
+                background: $cover-color;
                 padding: 4rem 0;
                 transform: rotateX(-90deg);  
                         //主要是動這邊, 相當於rotate3d(1, 0, 0, -90).
                 transform-origin: 50% 50%;
                 transition: 0.5s;
                 opacity: 0;
-                color: white;
+                color: $white;
                 font-size: 1.5rem;
 
                 p{
@@ -241,7 +248,7 @@ section.hero{
     grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 
     .box{
         text-align: center;
@@ -262,14 +269,14 @@ section.hero{
 
             .text{
                 text-align: center;
-                background: rgb(39, 112, 180);
+                background: $cover-color;
                 padding: 8rem 0;
                 transform: rotateX(-90deg);  
                         //主要是動這邊, 相當於rotate3d(1, 0, 0, -90).
                 transform-origin: 50% 50%;
                 transition: 0.5s;
                 opacity: 0;
-                color: white;
+                color: $white;
                 font-size: 1.5rem;
 
                 p{
@@ -286,40 +293,77 @@ section.hero{
     }
 }
 
+.facility {
 
+        h2{
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 3rem;
+        }
 
-.footer .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 1.5rem;
-    align-items: flex-start;
-
-    .box{
-        text-align: center;
-
-        i{
-            font-size: 1.5rem;
-            line-height: 5rem;
-            height: 5rem;
-            width: 5rem;
-            border-radius: 50%;
-            background-color: rgb(39, 112, 180);
-            color: white;
-    
-            h3{
-                margin: .5rem 0;
-                font-size: 2rem;
-                color: black;
+        .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap:1rem;
+            align-items: center;
+            margin-bottom: 3rem;
+            margin-top: 7rem;
+            .box{
+                text-align: center;
+                margin-bottom: 2rem;
+                img{
+                    height: 4rem;
+                    margin-bottom: 1rem;
+                }
             }
+            h3{
+                font-size: 1.4rem;
+                color: $black;
+                margin: 1rem;
+            }
+        
             p{
                 line-height: 2;
-                font-size: 1.6rem;
-                color: #666;
+                font-size: 1rem;
+                color: $light-colol;
             }
         }
-    }
+}
 
+
+.footer {
+    font-family: 'Nunito', sans-serif;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+    .flex{
+        font-size: 1rem;
+        display: block;
+        align-items: center;
+        justify-content: space-between; 
+        position: relative;
+
+        .credit{
+            display: block ruby;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info{
+            display: flex;
+            align-items: center;
+
+            a{
+                color: $black;
+                display: block;
+                font-size: 1rem;
+                padding-right: 1rem;
+                i{
+                  font-size: 1.5rem;
     
+                }
+            }
+        }
+        
+    }
 }
 
 
@@ -327,15 +371,35 @@ section.hero{
   
 @media only screen and (min-width: 680px){
     
+
     body{
         margin: 1.5em 5em;
         font-family: 'Noto Sans Traditional Chinese', sans-serif;
     }
 
+    .facility{
+        
+        h2{
+            font-size: 2rem;
+        }
+
+        .box-container .box img{
+            height: 3rem;
+        }
+    }
+
+    .footer {
+        margin-left: 0rem;
+            .flex{
+                display:flex;
+                
+            }
+        }
+
 }
 
 @media only screen and (min-width: 920px){
-    
+
     .menu{
         display: none;
     }
@@ -354,7 +418,7 @@ section.hero{
             display: flex;
             margin: 0;
             a{
-                color: white;
+                color: $white;
                 padding: .5em 1.5em;
                 font-size: .9rem;
                 &:hover{
@@ -374,25 +438,25 @@ section.hero{
     }
 
     .logo{
-        color: black;
+        color: $black;
         
         span{
-            color: #0789de;
+            color: $main-color;
         }
     }
 
     section.hero{
-        color: black;
+        color: $black;
         height: auto;
         width: 40%;
         margin-bottom: 8em;
 
         .down-arrow{
-            stroke: black;
+            stroke: $black;
             position: unset;
 
             path{
-                fill: black;
+                fill: $black;
             }
         }
 
@@ -429,6 +493,28 @@ section.hero{
 
     }
 
+    .facility{
+        
+        h2{
+            font-size: 2rem;
+        }
+
+        .box-container .box img{
+            height: 4rem;
+        }
+    }
+
+    .footer {
+        margin-left: 0rem;
+            .flex{
+                display:flex;
+                .credit{
+                   
+                    margin-bottom: 0;
+                }
+            }
+        }
+
 }
 
 @media only screen and (min-width: 1200px){
@@ -437,6 +523,17 @@ section.hero{
     }
     .feature{
         gap: 0;
+    }
+
+    .footer {
+    margin-left: 0rem;
+        .flex{
+            display:flex;
+            .credit{
+                   
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
