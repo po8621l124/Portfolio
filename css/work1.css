@@ -1,0 +1,150 @@
+section.W1 {
+  margin-top: 12rem;
+}
+
+section.W1 h1 {
+  font-size: 2rem;
+}
+
+section.W1 .down-arrow {
+  stroke: #0789de;
+  width: .7rem;
+  animation: moveArrow 1s alternate-reverse infinite;
+}
+
+section.W1 .down-arrow path {
+  fill: #0789de;
+}
+
+section.W1 .arrow {
+  margin-top: 5rem;
+}
+
+section.Wdetail {
+  margin-top: 3rem;
+}
+
+section.Wdetail .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (15rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 15rem);
+}
+
+section.Wdetail .Role {
+  margin-bottom: 1.5rem;
+}
+
+section.Wdetail .itemtitle {
+  font-size: 18px;
+  color: #888888;
+  margin-bottom: .5rem;
+}
+
+section.Wdetail .itemDetail {
+  font-size: 18px;
+}
+
+section.Wdetail .Design {
+  margin-top: 3rem;
+  color: #666;
+  line-height: 2;
+}
+
+section.img {
+  margin-top: 3rem;
+}
+
+section.img img {
+  max-width: 100%;
+  height: auto;
+}
+
+section.img .imgDetail {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: #666;
+  line-height: 2;
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-bottom: .5rem;
+  background-color: #0789de;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+}
+
+.btn:hover {
+  background-color: #000;
+}
+
+.btn-back {
+  font-size: 1rem;
+  display: inline-block;
+  color: #000;
+  margin-top: 2rem;
+}
+
+.btn-back:hover {
+  color: #0789de;
+  text-decoration: underline;
+}
+
+.btn1 {
+  text-align: center;
+}
+
+@media only screen and (min-width: 680px) {
+  section.Wdetail {
+    text-align: left;
+  }
+  section.Wdetail .Role {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  section.W1 {
+    text-align: center;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  section.W1 h1 {
+    font-size: 4rem;
+  }
+  section.W1 .arrow {
+    margin-top: 9rem;
+  }
+  section.Wdetail {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: inline-block;
+  }
+  section.Wdetail .Role {
+    margin-bottom: 0;
+  }
+  .btn-back {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  section.W1 {
+    margin-left: 13rem;
+    margin-right: 13rem;
+  }
+  section.W1 h1 {
+    font-size: 4rem;
+  }
+  section.Wdetail .Role {
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=work1.css.map */

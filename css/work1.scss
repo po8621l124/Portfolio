@@ -1,0 +1,174 @@
+
+$main-color: #0789de;
+$black: #000;
+$white: #fff;
+$cover-color: rgb(39, 112, 180);
+$light-color: #666;
+$font-color:rgb(136, 136, 136);
+
+section.W1{
+    margin-top: 12rem;
+
+    h1{
+        font-size: 2rem;
+    }
+    .down-arrow{
+        stroke: $main-color;
+        width: .7rem;
+        animation: moveArrow 1s alternate-reverse infinite;
+
+        path{
+            fill: $main-color;
+        }
+    }
+    .arrow{
+        margin-top: 5rem;
+    }
+
+} 
+
+section.Wdetail{
+    margin-top: 3rem;
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 15rem);
+    }
+
+    .Role{
+        margin-bottom: 1.5rem;
+    }
+
+    .itemtitle{
+        font-size: 18px;
+        color: $font-color;
+        margin-bottom: .5rem;
+    }
+
+    .itemDetail{
+        font-size: 18px;
+    }
+
+    .Design{
+        margin-top: 3rem;
+        color: $light-color;
+        line-height: 2;
+    }
+
+}
+
+section.img{
+    margin-top: 3rem;
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .imgDetail{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        color: $light-color;
+        line-height: 2;
+        text-align: left;
+    }
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+    background-color: $main-color;
+    cursor: pointer;
+    color: $white;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    &:hover{
+        background-color: $black;
+    }
+}
+
+.btn-back{
+    font-size: 1rem;
+    display: inline-block;
+    color: $black;
+    margin-top: 2rem;
+
+    &:hover{
+        color: $main-color;
+        text-decoration: underline;
+    }
+}
+
+.btn1{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 680px){
+
+    section.Wdetail{
+        text-align: left;
+
+        .Role{
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 920px){
+
+    section.W1{
+        text-align: center;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        h1{
+            font-size: 4rem;
+        }
+
+        .arrow{
+            margin-top: 9rem;
+        }
+    } 
+
+    section.Wdetail{
+        align-items: center;
+        display: inline-block;
+
+        .Role{
+            margin-bottom: 0;
+        }
+    }
+
+
+    .btn-back{
+        margin-top: 1rem;
+        
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    section.W1{
+        margin-left: 13rem;
+        margin-right: 13rem;
+        h1{
+            font-size: 4rem;
+        }
+    } 
+
+    section.Wdetail{
+        .Role{
+            margin-bottom: 0;
+        }
+    }
+}

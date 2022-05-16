@@ -1,9 +1,10 @@
 
-$light-color: #666;
 $main-color: #0789de;
 $black: #000;
 $white: #fff;
 $cover-color: rgb(39, 112, 180);
+$light-color: #666;
+
 
 body{
     margin: 1.5em;
@@ -57,7 +58,7 @@ nav {
             display: block;
             width: 100%;
             &:hover{
-                background-color: rgb(235, 235, 235);
+                background-color: $white;
             }
         }
     }
@@ -78,7 +79,6 @@ header{
         cursor: pointer;
     }
 }
-
 
 h1{
     font-size: 3rem;
@@ -137,9 +137,9 @@ section.hero{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-  }
+}
 
-  .more-work .work-container{
+.more-work .work-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
     gap: 1rem;
@@ -306,7 +306,6 @@ section.hero{
             grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
             gap:1rem;
             align-items: center;
-            margin-bottom: 3rem;
             margin-top: 7rem;
             .box{
                 text-align: center;
@@ -325,16 +324,17 @@ section.hero{
             p{
                 line-height: 2;
                 font-size: 1rem;
-                color: $light-colol;
+                color: $light-color;
             }
         }
 }
 
-
 .footer {
     font-family: 'Nunito', sans-serif;
     margin-left: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+
     .flex{
         font-size: 1rem;
         display: block;
@@ -365,10 +365,18 @@ section.hero{
         
     }
 }
-
-
- 
   
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 680px){
     
 
@@ -429,7 +437,6 @@ section.hero{
         }
     }
     
-
     .hero-img{
         left: unset;
         right: 0;
@@ -513,8 +520,8 @@ section.hero{
                     margin-bottom: 0;
                 }
             }
-        }
-
+    }
+ 
 }
 
 @media only screen and (min-width: 1200px){
@@ -524,7 +531,6 @@ section.hero{
     .feature{
         gap: 0;
     }
-
     .footer {
     margin-left: 0rem;
         .flex{
@@ -535,6 +541,7 @@ section.hero{
             }
         }
     }
+    
 }
 
 @keyframes introLoad{
@@ -548,7 +555,7 @@ section.hero{
 
 @keyframes moveArrow{
     from{
-        transform: translateY(-30px)
+        transform: translateY(-50px)
     }
     to{
         transform: translateY(0px)
